@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSearcher", "MusicSearcher\MusicSearcher.csproj", "{DCC6872A-EA8A-4C22-9922-BEE36EE61CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Contracts", "Contracts\MS.Contracts.csproj", "{0E7C231F-4899-4812-877D-7565AB509203}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MS", "MS", "{E3246992-2CBB-409E-94F5-6DD66A4997D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC6872A-EA8A-4C22-9922-BEE36EE61CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC6872A-EA8A-4C22-9922-BEE36EE61CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC6872A-EA8A-4C22-9922-BEE36EE61CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC6872A-EA8A-4C22-9922-BEE36EE61CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7C231F-4899-4812-877D-7565AB509203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7C231F-4899-4812-877D-7565AB509203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7C231F-4899-4812-877D-7565AB509203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7C231F-4899-4812-877D-7565AB509203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E7C231F-4899-4812-877D-7565AB509203} = {E3246992-2CBB-409E-94F5-6DD66A4997D5}
+		{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB} = {E3246992-2CBB-409E-94F5-6DD66A4997D5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97AC1F9D-C245-4F44-9A4C-BA23F204B8B8}
+	EndGlobalSection
+EndGlobal
