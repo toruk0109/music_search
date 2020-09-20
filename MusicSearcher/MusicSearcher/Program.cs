@@ -9,6 +9,9 @@ namespace MusicSearcher
 	{
 		public static void Main(string[] args)
 		{
+			var musicApiWrapper = new ApiWrapper();
+			musicApiWrapper.FindByArtists("Jack Johnson", out object albums);
+			Console.WriteLine((string)albums);
 		}
 	}
 }

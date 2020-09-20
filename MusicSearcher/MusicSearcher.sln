@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.Contracts", "Contracts\M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MS", "MS", "{E3246992-2CBB-409E-94F5-6DD66A4997D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.ITunes", "MS.ITunes\MS.ITunes.csproj", "{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{0E7C231F-4899-4812-877D-7565AB509203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7C231F-4899-4812-877D-7565AB509203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7C231F-4899-4812-877D-7565AB509203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FBC769-ABE1-4EF9-B8D2-D66D4D7135DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
