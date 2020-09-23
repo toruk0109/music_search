@@ -1,7 +1,14 @@
-﻿namespace MS.Contracts
+﻿using System.Collections.Generic;
+
+using MS.Contracts.Entity;
+
+
+namespace MS.Contracts
 {
 	public interface IMusicApiWrapper
 	{
-		void FindByArtists(string artistName, out object albums);
+		IEnumerable<ITrack> FindTracksByArtist(string artistName, int limit);
+
+		IEnumerable<IAlbum> FindAlbumsByArtists(string artistName, int limit);
 	}
 }

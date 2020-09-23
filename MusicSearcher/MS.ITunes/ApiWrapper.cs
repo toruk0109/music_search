@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Text.RegularExpressions;
 
 using MS.Contracts;
+using MS.Contracts.Entity;
+using MS.ITunes.Entity;
+using MS.ITunes.RequestResult;
+
+using Newtonsoft.Json;
 
 
 namespace MS.ITunes
@@ -13,11 +18,22 @@ namespace MS.ITunes
 	{
 		private const string UrlApi = "https://itunes.apple.com/search";
 
-		public void FindByArtists(string artistName, out object albums)
+		public IEnumerable<ITrack> FindTracksByArtist(string artistName, int limit = 200)
+		{
+			return FindEntityByArtist<Track>(artistName, "musicTrack", limit);
+		}
+
+		public IEnumerable<IAlbum> FindAlbumsByArtists(string artistName, int limit = 200)
+		{
+			return FindEntityByArtist<Album>(artistName, "album", limit);
+		}
+
+		private static IEnumerable<T> FindEntityByArtist<T>(string artistName, string entity, int limit)
 		{
 			artistName = artistName.Replace(' ', '+');
-			string url = $"{UrlApi}?term={artistName}";
-			albums = null;
+			string url = $"{UrlApi}?term={artistName}&entity={entity}";
+			if (limit > 0)
+				url = $"{url}&limit={limit}";
 
 			HttpWebRequest request = WebRequest.CreateHttp(url);
 
@@ -28,9 +44,15 @@ namespace MS.ITunes
 
 			using var reader = new StreamReader(stream);
 
-			string result = reader.ReadToEnd();
+			string result = reader.ReadToEnd().Trim();
+			var settings = new JsonSerializerSettings
+			{
+				DateFormatHandling = DateFormatHandling.MicrosoftDateFormat,
+				Formatting = Formatting.Indented
+			};
+			var searchResult = JsonConvert.DeserializeObject<SearchResult<T>>(result, settings);
 
-			albums = result;
+			return searchResult.Entities;
 		}
 	}
 }
